@@ -1,26 +1,16 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Counter
- *
- * @author marc
- */
 class Counter {
     private $curNumber = 0;
     
     public function returnFizzOrBuzzOrFizzBuzz($nrObj) {
         $returnValue = '';
         
-        if ($nrObj->isDivisibleByThree() || $nrObj->containsThree()) {
+        if ($nrObj->isDivisibleBy(3) || $nrObj->contains(3)) {
             $returnValue .= 'Fizz';
         }
         
-        if ($nrObj->isDivisibleByFive() || $nrObj->containsFive()) {
+        if ($nrObj->isDivisibleBy(5) || $nrObj->contains(5)) {
             $returnValue .= 'Buzz';
         }
         
@@ -32,10 +22,7 @@ class Counter {
     }
     
     public function nextNumber() {
-        $this->curNumber++;
-        return $this->curNumber;
+        return ++$this->curNumber;
     }  
     
 }
-
-?>

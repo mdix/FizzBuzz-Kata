@@ -1,6 +1,7 @@
 <?php
 
 require_once dirname(__FILE__) . '/../Counter.php';
+require_once dirname(__FILE__) . '/../Number.php';
 
 /**
  * Test class for Counter.
